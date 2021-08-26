@@ -14,6 +14,8 @@ router.get("/leaderboard", Controller.getTopScorer);
 
 router.get("/users", Controller.getUsers);
 
+router.get("/scores", Controller.getScores);
+
 router.post("/word", Controller.checkWord);
 
 router.patch("/user/:id", Controller.logoutUser);

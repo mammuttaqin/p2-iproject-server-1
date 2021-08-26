@@ -164,6 +164,18 @@ class GameController {
         next(err);
       });
   }
+
+  static getScores(req, res, next) {
+    Score.findAll({
+      include: [User],
+    })
+      .then((result) => {
+        res.status(200).json(result);
+      })
+      .catch((err) => {
+        next(err);
+      });
+  }
 }
 
 module.exports = GameController;
